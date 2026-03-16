@@ -1,85 +1,148 @@
-body{
+*{
 
 margin:0;
 padding:0;
-min-height:100vh;
-
-/* IMAGEM DE FUNDO */
-
-background-image: url("https://images.unsplash.com/photo-1773676199690-e06d3acaf652?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg");
-background-size: cover;
-background-position: center;
-background-repeat: no-repeat;
-background-attachment: fixed;
-
-font-family: Arial, sans-serif;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
 
 }
 
-.container{
+/* fundo */
 
-background:white;
-padding:30px;
-border-radius:10px;
-max-width:700px;
-margin:auto;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+body{
+
+height:100vh;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+background-image:url("piscinas.jpg");
+background-size:cover;
+background-position:center;
 
 }
 
-h1{
+/* card */
 
-color:#0f4c75;
+.calculadora-card{
+
+background:rgba(255,255,255,0.95);
+
+width:360px;
+
+padding:40px;
+
+border-radius:15px;
+
+box-shadow:0 10px 40px rgba(0,0,0,0.25);
+
+}
+
+/* titulo */
+
+.calculadora-card h2{
+
+text-align:center;
+
+margin-bottom:25px;
+
+color:#2f8fb3;
+
+}
+
+/* campos */
+
+.campo{
+
+margin-bottom:18px;
+
+}
+
+.campo label{
+
+font-weight:bold;
+display:block;
+margin-bottom:5px;
+
+}
+
+.campo input{
+
+width:100%;
+
+padding:10px;
+
+border-radius:6px;
+
+border:1px solid #ccc;
+
+font-size:14px;
+
+}
+
+/* botão */
+
+.btn-calcular{
+
+width:100%;
+
+padding:13px;
+
+margin-top:10px;
+
+background:linear-gradient(90deg,#2f8fb3,#1d4ed8);
+
+color:white;
+
+border:none;
+
+border-radius:8px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+.btn-calcular:hover{
+
+opacity:0.9;
+transform:scale(1.03);
+
+}
+
+/* resultado */
+
+.resultado{
+
+margin-top:20px;
+
+padding:18px;
+
+background:#eef8fc;
+
+border-radius:8px;
+
+font-size:15px;
+
+line-height:1.6;
+
 text-align:center;
 
 }
 
-input, select{
+/* celular */
 
-width:100%;
-padding:10px;
-margin-bottom:10px;
+@media(max-width:500px){
 
-}
+.calculadora-card{
 
-button{
-
-background:#0f4c75;
-color:white;
-border:none;
-padding:12px;
-cursor:pointer;
-border-radius:5px;
-width:100%;
+width:90%;
+padding:30px;
 
 }
 
-button:hover{
-
-background:#3282b8;
-
-}
-
-.resultado{
-
-margin-top:15px;
-padding:15px;
-background:#eef2f7;
-border-radius:8px;
-
-}
-
-.verde{
-color:green;
-font-weight:bold;
-}
-
-.amarelo{
-color:#d4a000;
-font-weight:bold;
-}
-
-.vermelho{
-color:red;
-font-weight:bold;
 }
