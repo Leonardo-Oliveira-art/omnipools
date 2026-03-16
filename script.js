@@ -91,6 +91,18 @@ let alcalinidade = parseFloat(document.getElementById("alcalinidade").value);
 
 let resultado = "";
 
+/* validação */
+
+if(isNaN(volume) || isNaN(ph) || isNaN(cloro) || isNaN(alcalinidade)){
+
+document.getElementById("resultado").innerHTML =
+"Preencha todos os campos.";
+
+return;
+
+}
+
+/* PH */
 
 if(ph >= 7.4 && ph <= 7.6){
 
@@ -102,15 +114,15 @@ else if(ph < 6.8){
 
 let qtd = volume * 40;
 
-resultado += `<p class='vermelho'>pH Muito Baixo ❌ Adicionar ${qtd}g de Barrilha</p>`;
+resultado += `<p class='vermelho'>pH Muito Baixo ❌ Adicionar ${qtd} g de Barrilha</p>`;
 
 }
 
 else if(ph >= 6.8 && ph <= 7.0){
 
-let qtd = volume * 20;
+let qtd = volume * 40;
 
-resultado += `<p class='amarelo'>pH Baixo ⚠ Adicionar ${qtd}g de Barrilha</p>`;
+resultado += `<p class='amarelo'>pH Baixo ⚠ Adicionar ${qtd} g de Barrilha</p>`;
 
 }
 
@@ -121,50 +133,53 @@ resultado += "<p class='vermelho'>pH Alto ⚠ Adicionar redutor de pH</p>";
 }
 
 
+/* CLORO */
 
-if(cloro <= 1.0){
+if(cloro <= 1){
 
 let qtd = volume * 4;
 
-resultado += `<p class='amarelo'>Cloro Baixo ⚠ Adicionar ${qtd}g de Cloro</p>`;
+resultado += `<p class='amarelo'>Cloro Baixo ⚠ Adicionar ${qtd} g de Cloro</p>`;
 
 }
 
-else if(cloro >= 2.0 && cloro <= 4.0){
+else if(cloro >= 2 && cloro <= 4){
 
 resultado += "<p class='verde'>Cloro Ideal ✅</p>";
 
 }
 
-else if(cloro >= 5.0){
+else if(cloro > 4){
 
 resultado += "<p class='vermelho'>Cloro Muito Alto ❌ Diluir água</p>";
 
 }
 
 
+/* ALCALINIDADE */
 
-if(alcalinidade >= 8 && alcalinidade <= 12){
+if(alcalinidade >= 80 && alcalinidade <= 120){
 
 resultado += "<p class='verde'>Alcalinidade Ideal ✅</p>";
 
 }
 
-else if(alcalinidade >= 1 && alcalinidade <= 7){
+else if(alcalinidade < 80){
 
-let diferenca = 8 - alcalinidade;
+let diferenca = 80 - alcalinidade;
 
-let qtdBicarbonato = diferenca * 20 * volume;
+let qtdBicarbonato = diferenca * 1.8 * volume;
 
-resultado += `<p class='amarelo'>Alcalinidade Baixa ⚠ Adicionar ${qtdBicarbonato}g de Bicarbonato</p>`;
+resultado += `<p class='amarelo'>Alcalinidade Baixa ⚠ Adicionar ${qtdBicarbonato.toFixed(0)} g de Bicarbonato</p>`;
+
+}
+
+else if(alcalinidade > 120){
+
+resultado += "<p class='vermelho'>Alcalinidade Alta ❌ Ajuste necessário</p>";
 
 }
 
-else if(alcalinidade > 12){
-
-resultado += "<p class='vermelho'>Alcalinidade Alta ❌ Ajuste técnico necessário</p>";
-
-}
 
 document.getElementById("resultado").innerHTML = resultado;
 
