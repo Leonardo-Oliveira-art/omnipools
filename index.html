@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Calculadora de Piscina</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Calculadora de Piscinas</h1>
+
+<!-- CALCULO DE VOLUME -->
+
+<h2>Volume da Piscina</h2>
+
+<label>Comprimento (m)</label>
+<input type="number" id="comprimento">
+
+<label>Largura (m)</label>
+<input type="number" id="largura">
+
+<label>Profundidade mínima (m)</label>
+<input type="number" id="profMin">
+
+<label>Profundidade máxima (m)</label>
+<input type="number" id="profMax">
+
+<button onclick="calcularPiscina()">Calcular Piscina</button>
+
+<div id="resultadoPiscina" class="resultado"></div>
+
+<hr>
+
+
+<!-- CALCULO DE PRODUTOS -->
+
+<h2>Calculadora de Produtos</h2>
+
+<label>Volume da piscina (m³)</label>
+<input type="number" id="volumeProduto">
+
+<select id="produto">
+<option value="">Selecione o produto</option>
+<option value="5">Algicida de Manutenção (5 ml/m³)</option>
+<option value="8">Algicida de Choque (8 ml/m³)</option>
+<option value="6">Clarificante (6 ml/m³)</option>
+</select>
+
+<button onclick="calcularProduto()">Calcular Dosagem</button>
+
+<div id="resultadoProduto" class="resultado"></div>
+
+<hr>
+
+
+<!-- CONTROLE DA AGUA -->
+
+<h2>Controle de Água</h2>
+
+<label>Volume da Piscina (m³)</label>
+<input type="number" id="volume">
+
+<label>pH</label>
+<input type="number" step="0.1" id="ph">
+
+<label>Cloro (ppm)</label>
+<input type="number" step="0.1" id="cloro">
+
+<label>Alcalinidade (ppm)</label>
+<input type="number" id="alcalinidade">
+
+<button onclick="analisar()">Analisar Água</button>
+
+<div id="resultado" class="resultado"></div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
