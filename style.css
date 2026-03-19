@@ -1,148 +1,136 @@
-*{
+body{
 
 margin:0;
 padding:0;
-box-sizing:border-box;
-font-family:Arial, Helvetica, sans-serif;
+min-height:100vh;
+
+/* IMAGEM DE FUNDO */
+
+background-image: url("https://images.unsplash.com/photo-1773946896493-150a41e894fc?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+font-family: Arial, sans-serif;
 
 }
 
-/* fundo */
 
-body{
+/* CONTAINER PRINCIPAL */
 
-height:100vh;
+.container{
 
-display:flex;
-align-items:center;
-justify-content:center;
+background: rgba(255,255,255,0.92);
+backdrop-filter: blur(4px);
 
-background-image:url("piscinas.jpg");
-background-size:cover;
-background-position:center;
+max-width: 600px;
+margin: auto;
+margin-top: 40px;
 
-}
+padding: 30px;
+border-radius: 12px;
 
-/* card */
-
-.calculadora-card{
-
-background:rgba(255,255,255,0.95);
-
-width:360px;
-
-padding:40px;
-
-border-radius:15px;
-
-box-shadow:0 10px 40px rgba(0,0,0,0.25);
+box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 
 }
 
-/* titulo */
 
-.calculadora-card h2{
+/* INPUTS E SELECT */
 
-text-align:center;
-
-margin-bottom:25px;
-
-color:#2f8fb3;
-
-}
-
-/* campos */
-
-.campo{
-
-margin-bottom:18px;
-
-}
-
-.campo label{
-
-font-weight:bold;
-display:block;
-margin-bottom:5px;
-
-}
-
-.campo input{
+input, select{
 
 width:100%;
-
 padding:10px;
+margin:10px 0;
 
-border-radius:6px;
-
+border-radius:5px;
 border:1px solid #ccc;
 
-font-size:14px;
-
 }
 
-/* botão */
 
-.btn-calcular{
+/* BOTÕES */
 
-width:100%;
+button{
 
-padding:13px;
-
-margin-top:10px;
-
-background:linear-gradient(90deg,#2f8fb3,#1d4ed8);
-
+background:#0077cc;
 color:white;
-
 border:none;
 
-border-radius:8px;
+padding:12px;
+width:100%;
 
-font-weight:bold;
-
+border-radius:5px;
 cursor:pointer;
 
-transition:0.3s;
+}
+
+button:hover{
+
+background:#005fa3;
 
 }
 
-.btn-calcular:hover{
 
-opacity:0.9;
-transform:scale(1.03);
-
-}
-
-/* resultado */
+/* RESULTADO */
 
 .resultado{
 
-margin-top:20px;
+margin-top:15px;
+padding:15px;
 
-padding:18px;
-
-background:#eef8fc;
-
+background:#eef2f7;
 border-radius:8px;
 
-font-size:15px;
+}
 
-line-height:1.6;
 
-text-align:center;
+/* CORES STATUS */
+
+.verde{
+color:green;
+font-weight:bold;
+}
+
+.amarelo{
+color:#d4a000;
+font-weight:bold;
+}
+
+.vermelho{
+color:red;
+font-weight:bold;
+}
+
+
+/* PERSONAGEM */
+
+.personagem{
+
+position: fixed;
+left: 40px;
+bottom: 20px;
+
+width: 140px;
 
 }
 
-/* celular */
 
-@media(max-width:500px){
+/* BALÃO DE FALA */
 
-.calculadora-card{
+.balao{
 
-width:90%;
-padding:30px;
+position: fixed;
+left: 40px;
+bottom: 170px;
 
-}
+background: white;
+padding: 15px;
+
+border-radius: 12px;
+width: 220px;
+
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 
 }
