@@ -1,0 +1,136 @@
+body{
+
+margin:0;
+padding:0;
+min-height:100vh;
+
+/* IMAGEM DE FUNDO */
+
+background-image: url("https://images.unsplash.com/photo-1773946896493-150a41e894fc?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D.jpg");
+background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+background-attachment: fixed;
+
+font-family: Arial, sans-serif;
+
+}
+
+
+/* CONTAINER PRINCIPAL */
+
+.container{
+
+background: rgba(255,255,255,0.92);
+backdrop-filter: blur(4px);
+
+max-width: 600px;
+margin: auto;
+margin-top: 40px;
+
+padding: 30px;
+border-radius: 12px;
+
+box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+
+}
+
+
+/* INPUTS E SELECT */
+
+input, select{
+
+width:100%;
+padding:10px;
+margin:10px 0;
+
+border-radius:5px;
+border:1px solid #ccc;
+
+}
+
+
+/* BOTÕES */
+
+button{
+
+background:#0077cc;
+color:white;
+border:none;
+
+padding:12px;
+width:100%;
+
+border-radius:5px;
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#005fa3;
+
+}
+
+
+/* RESULTADO */
+
+.resultado{
+
+margin-top:15px;
+padding:15px;
+
+background:#eef2f7;
+border-radius:8px;
+
+}
+
+
+/* CORES STATUS */
+
+.verde{
+color:green;
+font-weight:bold;
+}
+
+.amarelo{
+color:#d4a000;
+font-weight:bold;
+}
+
+.vermelho{
+color:red;
+font-weight:bold;
+}
+
+
+/* PERSONAGEM */
+
+.personagem{
+
+position: fixed;
+left: 40px;
+bottom: 20px;
+
+width: 140px;
+
+}
+
+
+/* BALÃO DE FALA */
+
+.balao{
+
+position: fixed;
+left: 40px;
+bottom: 170px;
+
+background: white;
+padding: 15px;
+
+border-radius: 12px;
+width: 220px;
+
+box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+}
